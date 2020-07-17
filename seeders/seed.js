@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
-let db = require("../models");
+let db = require("../models/transaction.js");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/transaction", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
@@ -19,8 +19,8 @@ let budgetSeed = [
   }
 ];
 
-db.Transaction.deleteMany({})
-  .then(() => db.Transaction.collection.insertMany(budgetSeed))
+db.deleteMany({})
+  .then(() => db.collection.insertMany(budgetSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
