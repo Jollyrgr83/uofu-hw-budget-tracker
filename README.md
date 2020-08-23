@@ -41,4 +41,4 @@ There are currently no tests for this app.
 
 ## **Deployed Application**
 
-[Deployed Application](https://serene-ravine-37617.herokuapp.com/)
+[Deployed Application](https://uofu-homework-budget.herokuapp.com/)
