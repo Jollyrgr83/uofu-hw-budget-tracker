@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+mongoose.connect("mongodb+srv://user1:password1@cluster-budget-tracker.oddcc.mongodb.net/heroku_wlgbr2xz?retryWrites=true&w=majority" || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
